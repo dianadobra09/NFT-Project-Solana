@@ -1,0 +1,66 @@
+@import "variables";
+
+
+.go4109123758 {
+    .go2072408551 {
+        max-width: 80vw;
+        background: $light-color;
+        border-radius: 2px;
+        font-size: 16px;
+        line-height: 24px;
+        color: $dark-text-color;
+    }
+}
+
+.toaster-container {
+    background: $accent-color;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+
+    .toaster-content {
+        display: flex;
+        justify-content: space-between;
+        font-size: 12px;
+        line-height: 18px;
+        letter-spacing: 0.1375em;
+        padding: 0 5%;
+        flex-wrap: wrap;
+        width: 100%;
+
+        .toaster-text {
+            max-width: 70%;
+        }
+
+        .toaster-main-text {
+            font-size: 26px;
+            line-height: 109%;
+            letter-spacing: -0.005em;
+            color: $light-text-color;
+            text-transform: initial;
+        }
+    }
+
+    @media only screen and (max-width: 800px) {
+        height: 170px;
+
+        .toaster-content {
+            padding: 0 5%;
+            font-size: 10px;
+
+            .toaster-text {
+                max-width: 100%;
+            }
+
+            .toaster-main-text {
+                font-size: 18px;
+            }
+        }
+
+        .buttons-container {
+            width: 100%;
+            margin-top: 20px;
+        }
+    }
+}

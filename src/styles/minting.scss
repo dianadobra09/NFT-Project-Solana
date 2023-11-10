@@ -1,0 +1,65 @@
+.minting-page-container {
+
+    height: calc(100vh);
+    max-height: 100vh;
+    width: 100%;
+    display: flex;
+    position: relative;
+
+    .minting-right-container {
+        width: 50vw;
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+        overflow: hidden;
+
+        @media (max-width: 900px), (orientation: portrait) {
+            width: 100vw;
+        }
+
+        .minting-content-container {
+            white-space: pre-wrap;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+
+            @media (max-width: 600px){
+                padding: 10%;
+            }
+        }
+    }
+
+    .minting-left-container {
+        display: flex;
+        align-items: flex-end;
+        width: 50vw;
+        justify-content: center;
+
+        @media (max-width: 900px), (orientation: portrait) {
+            display: none;
+        }
+
+        .img{
+
+
+        }
+
+        .background{
+            position: absolute;
+            width: 50vw;
+            z-index: -1;
+        }
+        .main-image {
+            width: auto;
+            max-height: 100vh;
+            z-index: 1;
+        }
+    }
+}
+
+.loading-spinner {
+    position: absolute;
+    bottom: -80px;
+}

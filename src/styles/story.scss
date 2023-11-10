@@ -1,0 +1,58 @@
+@import "variables";
+
+.story-container {
+
+    .story-title-container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+
+    .story-show-more {
+        width: 100%;
+        cursor: pointer;
+        margin-top: 10px;
+
+        &.mobile {
+            display: none;
+        }
+
+        @media only screen and (max-width: 768px) {
+            display: none;
+
+            &.mobile {
+                display: unset;
+            }
+        }
+    }
+
+
+    .story-floating-text-img {
+        position: absolute;
+        bottom: 8%;
+
+        &.right {
+            top: 8%;
+            right: 0;
+        }
+
+        @media only screen and (max-width: 768px) {
+            bottom: 2%;
+            width: 300px;
+
+            &.right {
+                top: 2%;
+            }
+        }
+
+        @media only screen and (max-width: 310px) {
+            display: none;
+        }
+    }
+
+    .my-anchor-css-class {
+        color: #ff4655;
+    }
+}

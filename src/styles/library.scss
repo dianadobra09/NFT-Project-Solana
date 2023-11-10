@@ -1,0 +1,80 @@
+@import "variables";
+
+.library-section-container {
+    display: flex;
+    align-items: center;
+
+    .library-text-container {
+        display: flex;
+        flex-direction: column;
+        margin-right: 120px;
+
+        @media only screen and (max-width: 1024px) {
+            margin-right: 40px;
+        }
+        @media only screen and (max-width: 900px) {
+            margin-right: unset;
+            margin-bottom: 50px;
+        }
+    }
+
+    img {
+        height: 400px;
+        width: 400px;
+
+        @media only screen and (max-width: 500px) {
+            height: 300px;
+            width: 300px;
+        }
+    }
+
+    @media only screen and (max-width: 900px) {
+        flex-direction: column;
+
+    }
+}
+
+
+.slider {
+    margin-top: 250px;
+
+    @media only screen and (max-width: 1024px) {
+        margin-top: 100px;
+    }
+
+    .slider-img {
+        height: 300px;
+        width: auto;
+
+        @media only screen and (max-width: 900px) {
+            height: 200px;
+
+        }
+    }
+
+    .slick-slide {
+        margin: 0 30px;
+    }
+
+    .slick-dots {
+        position: unset;
+        margin-top: 30px;
+
+        li button {
+            border: none;
+            background: #545454;
+            padding:unset;
+            height: 2px;
+            width: 20px;
+
+            &:before {
+                content: unset;
+            }
+        }
+        li.slick-active button {
+            background: $accent-color;
+        }
+    }
+
+
+}

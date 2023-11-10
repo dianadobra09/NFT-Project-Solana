@@ -1,0 +1,110 @@
+@import "styles/landingPage";
+@import "styles/video";
+@import "styles/variables";
+@import "styles/header";
+@import "styles/shared";
+@import "styles/team";
+@import "styles/story";
+@import "styles/roadmap";
+@import "styles/footer";
+@import "styles/communityBanner";
+@import "styles/library";
+@import "styles/minting";
+@import "styles/wallet";
+@import "styles/toaster";
+@import "styles/collaborations";
+
+@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/plus-jakarta-display.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/plus-jakarta-display.min.css");
+
+
+body {
+    margin: 0;
+    font-family: $base-font;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: $dark-color;
+    color: $light-text-color;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .page-width {
+        width: auto;
+        padding: 0 16px;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .page-width {
+        width: auto;
+        max-width: calc(969px + 16px * 2);
+        padding: 0 16px;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .page-width {
+        max-width: calc(1170px + 27px * 2);
+        padding: 0 27px;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .page-width {
+        max-width: calc(1170px + 100px * 2);
+        padding: 0 100px;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .page-width {
+        max-width: calc(1368px + 135px * 2);
+        padding: 0 135px;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    .page-width {
+        max-width: calc(1368px + 140px * 2);
+        padding: 0 140px;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .page-width {
+        max-width: 100%;
+        padding: 0 200px;
+        margin: 0 auto;
+    }
+}
+
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #d9dbe8;
+}
+
+::-webkit-scrollbar {
+    width: 3px;
+    height: 5px;
+    background-color: #d9dbe8;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $accent-color;
+}

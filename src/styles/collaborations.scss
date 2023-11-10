@@ -1,0 +1,22 @@
+.collaborations-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    .celebrity-container {
+        cursor: pointer;
+
+        img {
+            height: 180px;
+        }
+
+        @media only screen and (max-width: 1300px) {
+            img {
+                height: 160px;
+            }
+        }
+
+    }
+}

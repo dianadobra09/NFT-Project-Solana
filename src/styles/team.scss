@@ -1,0 +1,122 @@
+@import "variables";
+
+.team-container {
+    background-color: $light-color;
+
+    .team-title {
+        @media only screen and (max-width: 768px) {
+            width: 320px;
+        }
+
+        @media only screen and (max-width: 310px) {
+            width: 250px;
+        }
+
+        @media only screen and (min-width: 768px) {
+            width: 500px;
+        }
+
+        @media only screen and (min-width: 1024px) {
+            width: 710px;
+        }
+    }
+
+    .floating-text {
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 24px;
+        text-align: center;
+        letter-spacing: 0.005em;
+        color: #AFAFAF;
+        transform: rotate(90deg);
+        position: absolute;
+        right: 116px;
+        top: 150px;
+
+        @media only screen and (max-width: 768px) {
+            display: none;
+        }
+
+    }
+
+    .persons-group {
+        font-family: Inter, serif;
+        color: $dark-text-color;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+
+        &:first-of-type {
+            margin-bottom: 30px;
+        }
+
+        .person-container {
+            width: 252px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+
+            @media only screen and (max-width: 310px) {
+                width: 200px;
+                img {
+                    width: 200px;
+                }
+            }
+
+            .person-name {
+                font-family: Inter, serif;
+                font-style: normal;
+                font-weight: 800;
+                font-size: 23px;
+                line-height: 28px;
+                letter-spacing: -0.05em;
+                padding: 10px 0;
+                display: flex;
+                justify-content: space-between;
+
+                svg{
+                    margin-left: 10px;
+                }
+            }
+
+            .person-role {
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 17px;
+                letter-spacing: -0.05em;
+                text-transform: uppercase;
+                margin-bottom: 5px;
+            }
+
+            .person-description {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 15px;
+                letter-spacing: 0.0025em;
+                color: #757575;
+            }
+        }
+    }
+
+    .team-floating-text-img {
+        position: absolute;
+        opacity: 0.15;
+        top: 17%;
+
+        &.right {
+            top: 52%;
+            right: 0;
+        }
+
+        @media only screen and (max-width: 768px) {
+            top: 2%;
+            width: 300px;
+        }
+
+        @media only screen and (max-width: 310px) {
+            display: none;
+        }
+
+    }
+}

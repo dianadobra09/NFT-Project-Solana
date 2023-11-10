@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+    <url>
+        <loc>https://houseofdracula.io/</loc>
+        <video:video>
+            <video:thumbnail_loc>https://houseofdracula.io/thumbnail.png</video:thumbnail_loc>
+            <video:title>House of Dracula</video:title>
+            <video:description>Official House of Dracula NFT collection</video:description>
+            <video:content_loc>
+                https://dai.ly/x85ewa4
+            </video:content_loc>
+            <video:player_loc>
+                https://dai.ly/x85ewa4
+            </video:player_loc>
+            <video:duration>600</video:duration>
+            <video:publication_date>20021-11-10T19:20:30+08:00</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:live>no</video:live>
+        </video:video>
+    </url>
+    <url>
+        <loc>https://houseofdracula.io/</loc>
+    </url>
+</urlset>

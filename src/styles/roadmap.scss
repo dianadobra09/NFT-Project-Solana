@@ -1,0 +1,150 @@
+@import "variables";
+
+.roadmap-content {
+    display: flex;
+    justify-content: space-between;
+
+    .sword {
+        width: auto;
+
+        @media only screen and (max-width: 950px) {
+            display: none;
+        }
+
+        @media only screen and (min-width: 768px) {
+            height: 1250px;
+        }
+
+        @media only screen and (min-width: 1280px) {
+            height: 1350px;
+        }
+
+        @media only screen and (min-width: 1440px) {
+            height: 1450px;
+        }
+
+    }
+
+    .steps-container {
+        .step {
+            display: flex;
+            max-width: 100%;
+            padding: 30px 0;
+            position: relative;
+
+            &:hover {
+
+                .step-icon {
+                    color: $accent-color;
+
+                    &.solid {
+                        display: unset;
+                    }
+
+                    &.thin {
+                        display: none;
+                    }
+                }
+
+                .step-line:after {
+                    height: 100%;
+                }
+
+                .step-line-first:after {
+                    border-width: 0 1px 100px 1px;
+                }
+            }
+
+            .step-icon {
+                margin-right: 0;
+                width: 36px;
+                height: auto;
+                -webkit-transition: all .3s ease;
+                transition: all .3s ease;
+                color: #333333;
+
+                &.solid {
+                    display: none;
+                }
+            }
+
+            .step-content {
+                margin-left: 20px;
+                line-height: 30px;
+                max-width: 550px;
+                padding: 40px 50px;
+                background: #222222;
+
+                @media only screen and (max-width: 768px) {
+                    padding: 20px 30px;
+                }
+
+                div {
+                    font-size: 24px;
+
+                    @media only screen and (max-width: 600px) {
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            .step-line-first {
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 1px 100px 1px;
+                border-color: transparent transparent #333333 transparent;
+                position: absolute;
+                top: 0;
+                z-index: 0;
+                left: 18px;
+
+                &:after {
+                    content: "";
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 0;
+                    border-color: transparent transparent $accent-color transparent;
+                    position: absolute;
+                    top: 0;
+                    z-index: -1;
+                    -webkit-transition: all .7s ease;
+                    transition: all .7s ease;
+                }
+
+            }
+
+            .step-line {
+                content: "";
+                display: block;
+                height: 38%;
+                width: 2px;
+                background: #333333;
+                position: absolute;
+                top: 0;
+                z-index: 0;
+                left: 18px;
+
+                &.bottom {
+                    bottom: 0;
+                    top: unset;
+                }
+
+                &:after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    background-color: $accent-color;
+                    width: 2px;
+                    height: 0;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    -webkit-transition: all .7s ease;
+                    transition: all .7s ease;
+                }
+            }
+        }
+    }
+}

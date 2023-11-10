@@ -1,0 +1,354 @@
+@import "variables";
+
+.banner-img {
+    width: 100%;
+    height: auto;
+
+    &.mobile {
+        display: none;
+    }
+
+    @media only screen and (max-width: 768px) {
+        display: none;
+        &.mobile {
+            display: unset;
+        }
+    }
+}
+
+.section {
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
+    position: relative;
+    background-color: $dark-background-color;
+
+    &.medium {
+        padding-top: 150px !important;
+        padding-bottom: 150px !important;
+    }
+
+    &.wide {
+        padding-top: 250px !important;
+        padding-bottom: 250px !important;
+    }
+
+    @media only screen and (max-width: 768px) {
+        padding-top: 50px !important;
+        padding-bottom: 50px !important;
+
+        &.wide {
+            padding-top: 100px !important;
+            padding-bottom: 100px !important;
+        }
+    }
+}
+
+.mb-small {
+    margin-bottom: 20px;
+}
+
+.mb-medium {
+    margin-bottom: 50px;
+}
+
+.mb-big {
+    margin-bottom: 100px;
+
+    @media only screen and (max-width: 600px) {
+        margin-bottom: 50px;
+    }
+}
+
+.btn {
+    width: 170px;
+    height: 55px;
+    background: $light-color;
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: $dark-text-color;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.wide {
+        width: 220px;
+
+        &.thin {
+            font-size: 14px;
+            height: 40px;
+        }
+
+        @media only screen and (max-width: 1280px) {
+            width: 190px;
+
+            &.thin {
+                font-size: 12px;
+                height: 38px;
+            }
+        }
+    }
+
+    &.dark {
+        background: #333333;
+        color: $light-text-color;
+    }
+
+    &.grey {
+        background: $grey-background;
+        border: 1px solid #757575;
+    }
+
+    &.colored {
+        background: $accent-color;
+        color: $light-text-color;
+
+        &:hover {
+            background: $light-color;
+            color: $dark-text-color;
+        }
+    }
+
+    @media only screen and (max-width: 1280px) {
+        width: 136px;
+        height: 44px;
+        font-size: 14px;
+    }
+
+    &.hover-dark {
+        &:hover {
+            background: $dark-background-color;
+            color: $light-color;
+        }
+    }
+
+    &:hover {
+        background: $accent-color;
+        color: $light-color;
+    }
+
+    &:disabled {
+        background: #c0c0c0;
+        cursor: initial;
+    }
+
+    svg {
+        font-size: 26px;
+        margin-right: 20px;
+    }
+}
+
+.btn-close {
+    margin-left: 35px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: $light-text-color;
+}
+
+.text-basic {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.005em;
+    color: $light-text-color;
+    white-space: pre-wrap;
+
+    a {
+        color: $accent-color;
+        text-decoration: none;
+    }
+
+    @media only screen and (max-width: 600px) {
+        font-size: 14px;
+
+        &.shrink {
+            font-size: 12px;
+        }
+    }
+
+    &.dark{
+        color: $dark-text-color;
+    }
+
+    &.centered {
+        text-align: center;
+    }
+}
+
+.text-info {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.005em;
+    color: #A6A6A6;
+    white-space: pre-wrap;
+
+    &.small {
+        font-size: 12px;
+    }
+
+    &.centered {
+        text-align: center;
+    }
+}
+
+.text-accent {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 1.4725em;
+    text-transform: uppercase;
+    color: $accent-color;
+
+}
+
+
+.title {
+
+    white-space: pre-wrap;
+
+    &.uppercase {
+        text-transform: uppercase;
+    }
+
+    &.bold {
+        font-weight: bold;
+    }
+
+    &.centered {
+        text-align: center;
+    }
+
+    &.big {
+        font-size: 70px;
+        letter-spacing: -0.005em;
+
+        @media only screen and (max-width: 600px) {
+            font-size: 50px;
+        }
+    }
+
+    &.medium {
+        font-size: 38px;
+        letter-spacing: 0.0025em;
+
+        @media only screen and (max-width: 600px) {
+            font-size: 34px;
+        }
+    }
+
+    &.small {
+        font-size: 16px;
+    }
+
+    &.wide {
+        font-size: 22px;
+        letter-spacing: 0.0025em;
+
+        @media only screen and (max-width: 600px) {
+            font-size: 14px;
+        }
+    }
+
+    &.dark{
+        color: $dark-text-color;
+    }
+}
+
+
+.accent-color {
+    color: $accent-color;
+}
+
+.full-background-image {
+    position: fixed;
+    z-index: -1;
+
+    img {
+        min-width: 100vw;
+        min-height: 100vh;
+    }
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+
+.flex {
+    display: flex;
+
+    &.column {
+        flex-direction: column;
+    }
+
+    &.centered {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    &.space-between {
+        justify-content: space-between;
+    }
+}
+
+select {
+    width: 455px;
+    height: 45px;
+    background: #F6F6F6;
+    border: 1px solid #757575;
+    border-radius: 2px;
+    color: black;
+    box-sizing: border-box;
+    padding-left: 20px;
+    font-size: 16px;
+
+    /* reset */
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    /* arrow */
+    background-image: linear-gradient(45deg, transparent 50%, gray 50%),
+    linear-gradient(135deg, gray 50%, transparent 50%);
+    background-position: calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px),
+    calc(100% - 2.5em) 0.5em;
+    background-size: 5px 5px,
+    5px 5px,
+    1px 1.5em;
+    background-repeat: no-repeat;
+
+
+    @media only screen and (max-width: 600px) {
+        width: 100%;
+    }
+}
+
+.text-field {
+    color: white
+}
+
+.page-centered-content {
+    align-items: center;
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+}
+
+.white-container{
+    background-color: white;
+}

@@ -1,0 +1,110 @@
+@import "variables";
+
+.landing-page-container {
+    flex-direction: column;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    height: calc(100vh);
+    max-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    .main-content-container {
+        display: flex;
+        justify-content: flex-end;
+        height: 100vh;
+
+        .main-text-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-weight: 400;
+
+            .main-text-header-container{
+                display: flex;
+                flex-grow: 2;
+                flex-direction: column;
+                justify-content: flex-end;
+                margin-bottom: 25%;
+            }
+
+            .main-text {
+                &.mobile {
+                    display: none;
+                }
+            }
+
+            img {
+                @media only screen and (max-width: 768px) {
+                    width: 250px;
+                }
+
+                @media only screen and (min-width: 768px) {
+                    width: 260px;
+                }
+
+                @media only screen and (min-width: 1280px) {
+                    width: 300px;
+                }
+
+                @media only screen and (min-width: 1440px) {
+                    width: 358px;
+                }
+            }
+        }
+
+        .main-img-container {
+            display: flex;
+            align-items: end;
+            justify-content: flex-end;
+            width: 100%;
+
+            .main-image {
+                max-width: 100%;
+                max-height: 100vh;
+            }
+        }
+
+        @media (orientation: portrait) {
+            flex-direction: column;
+
+            .main-text-container {
+                align-items: center;
+                text-align: center;
+
+                .main-text-header-container {
+                    align-items: center;
+                    margin-bottom: 12%;
+                }
+
+                .main-text {
+                    display: none;
+
+                    &.mobile {
+                        display: unset;
+                    }
+                }
+            }
+
+        }
+
+        @media only screen and (max-width: 500px) {
+            .main-text-container {
+                margin-bottom: 25%;
+            }
+
+        }
+
+    }
+
+    .landing-page-bottom-shadow{
+        width: 100%;
+        height: auto;
+        position: absolute;
+        bottom: 0;
+    }
+}

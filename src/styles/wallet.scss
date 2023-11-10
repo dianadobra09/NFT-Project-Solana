@@ -1,0 +1,98 @@
+@import "variables";
+
+.top-wallet-adapter-dropdown-list{
+    .wallet-adapter-dropdown {
+        .wallet-adapter-dropdown-list {
+            left: -17%;
+            top: -350%;
+        }
+    }
+}
+
+
+button.wallet-adapter-button {
+    background-color: $grey-background;
+    border: 1px solid #757575;
+    border-radius: 2px;
+    cursor: pointer;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 24px;
+    text-align: center;
+    color: $dark-text-color;
+    text-transform: uppercase;
+    height: 40px;
+    font-size: 14px;
+    width: 215px;
+
+    @media only screen and (max-width: 1280px) {
+        width: 190px;
+        height: 38px;
+        font-size: 12px;
+    }
+
+    i {
+        filter: grayscale(100%) contrast(114%);
+    }
+
+    &.dark {
+        background: #333333;
+        color: $light-text-color;
+    }
+
+    &:not([disabled]):hover {
+        background-image: unset;
+    }
+
+    &:hover {
+        background: $accent-color;
+        color: $light-color;
+    }
+}
+
+.wallet-adapter-button-trigger {
+    background-color: $light-color;
+}
+
+.wallet-adapter-dropdown {
+    .wallet-adapter-dropdown-list {
+        background: #EEEEEE;
+        border-radius: unset;
+        padding: 20px;
+        left: -10%;
+        right: unset;
+        top: 36px;
+
+        .wallet-adapter-dropdown-list-item {
+            background: $light-background-color;
+            border-radius: unset;
+            color: $dark-text-color;
+        }
+    }
+}
+
+.wallet-adapter-modal {
+    .wallet-adapter-modal-container {
+        .wallet-adapter-modal-wrapper {
+            background: #EEEEEE;
+            border-radius: unset;
+            padding: 20px;
+
+            .wallet-adapter-modal-collapse-button {
+                width: 100%;
+            }
+
+            h1 {
+                color: $dark-text-color;
+                text-transform: capitalize;
+            }
+
+            ul {
+                button {
+                    justify-content: space-between;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

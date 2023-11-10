@@ -1,0 +1,22 @@
+version: "3.7"
+services:
+  letsencrypt:
+    image: linuxserver/letsencrypt
+    container_name: letsencrypt
+    cap_add:
+      - NET_ADMIN
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+      - URL=houseofdracula.io
+      - SUBDOMAINS=www
+      - VALIDATION=http
+    volumes:
+      - ./nginx-conf:/config/nginx/site-confs/default
+      - ./frontend:/internal/frontend
+      - ./letsencrypt:/config
+    ports:
+      - 443:443
+      - 80:80 #optional
+    restart: unless-stopped
